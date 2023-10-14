@@ -1,0 +1,105 @@
+body {
+    background-color: lightgrey;
+    color: blue;
+}
+h1 {
+    font-size: 36px; 
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+h2, h3 {
+    font-size: 24px;
+    font-family: sans-serif;
+    color: purple; 
+  }
+
+  p {
+    line-height: 1.5; 
+  }
+
+  img {
+    border: 5px solid black; 
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+  }
+  
+  /* Style the list items */
+  ul li {
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+ 
+.skip a{
+  background: white;
+  left: 0;
+  top: -40px;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1ss ease-out;
+  z-index: 1;
+  position: absolute; 
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav {
+  background-color: black; 
+}
+
+.nav li {
+  font-family: sans-serif;
+}
+
+li a{
+  color: white;
+  text-align: center;
+}
+  
+li a:hover {
+  background-color: lightblue;
+}
+
+
+.skip a:hover, .skip a:focus{
+  background: white;
+  left: 0;
+  top: 20px;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1ss ease-out;
+  z-index: 1;
+  position: absolute; 
+}
+
+li a.active {
+  background-color: white;
+  color: black;
+ 
+}
+
+
+  @media only screen and (max-width: 768px) {
+    .nav li a{    
+      
+      font-size: 25px;
+    }
+
+    img {
+      width: 80%;
+    }
+
+    .nav li {
+      margin-left: 0;
+      padding: 5px;
+    }
+
+    .nav {
+      padding: 5px;
+      
+    }
+  }
