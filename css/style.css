@@ -25,9 +25,24 @@ hr {
   background-color: #c8dbd4;
 }
 
+h1 {
+  font-size: 55px;
+  font-family: sans-serif;
+  color: #001435; 
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  animation: appear 3s;
+
+}
+
+@keyframes appear {
+  from {left: -800px;}
+  to {left: 0px;}
+}
 
 
-h1, h2 {
+h2 {
   font-size: 30px;
   font-family: sans-serif;
   color: #001435; 
@@ -100,6 +115,8 @@ h1, h2 {
 
 .nav a {
   text-decoration: none;
+  position: relative;
+  transition: all .35s;
 }
 
 .nav {
@@ -117,7 +134,29 @@ li a{
 }
   
 li a:hover {
-  background-color: lightblue;
+  background-color: gray;
+}
+
+nav a:hover:after{
+  width: 100%;
+}
+
+nav a:after {
+  
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .35s;
+
+}
+
+nav a span{
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -178,6 +217,14 @@ img, video {
     transition: none;        /* sets to default setting */
    }
 
+   
+    .gif {
+      display: none;
+    }
+
+    h1 {
+      animation: none;
+    }
 
 }
 
