@@ -1,37 +1,92 @@
 body {
-    background-color: lightgrey;
-    color: blue;
-}
-h1 {
-    font-size: 36px; 
     font-family: sans-serif;
-    text-align: center;
+    color: black;
+    line-height: auto;
+}
+
+.info {
+  text-align: center;
+  line-height: 1.5;
+  
+}
+#pet {
+  background-color: #e8d6cd;
+}
+
+#recipe {
+  background-color: #d7c6e1;
+}
+
+hr {
+  border-color: black;
+}
+
+#travel {
+  background-color: #c8dbd4;
+}
+
+
+
+h1, h2 {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #001435; 
+  text-align: center;
+  padding: 10px;
   }
 
-h2, h3 {
-    font-size: 24px;
+
+
+  h3 {
+    font-size: 18px;
     font-family: sans-serif;
-    color: purple; 
+    color: #742f03; 
+    text-align: center;
   }
 
   p {
     line-height: 1.5; 
+    padding: 10px;
   }
 
-  img {
-    border: 5px solid black; 
+  .big {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  img, video{
+    display: inline-block;
+    border: 5px solid #742f03; 
     padding: 10px;
     margin: 20px;
-    border-top-right-radius: 30px;
+    border-top-right-radius: 5px;
+
   }
   
   /* Style the list items */
-  ul li {
+  .pets li {
     display: inline-block;
-    margin-left: 50px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px black dashed;
+    border-radius: 50px;
+    line-height: 30px;
   }
 
- 
+  ul li {
+    padding: 10px;
+    line-height: auto;
+  }
+
+  ol li {
+    padding: 10px;
+    line-height: 1.5;
+  }
+
+
 .skip a{
   background: white;
   left: 0;
@@ -48,10 +103,11 @@ h2, h3 {
 }
 
 .nav {
-  background-color: black; 
+  background-color: #001435; 
 }
 
 .nav li {
+  display: inline-block;
   font-family: sans-serif;
 }
 
@@ -83,23 +139,50 @@ li a.active {
 }
 
 
-  @media only screen and (max-width: 768px) {
-    .nav li a{    
+.nav li a{    
       
-      font-size: 25px;
-    }
+  font-size: 25px;
+}
 
-    img {
-      width: 80%;
-    }
+img, video {
+  width: 80%;
+}
 
-    .nav li {
-      margin-left: 0;
-      padding: 5px;
-    }
+.nav li {
+  margin-left: 0;
+  padding: 5px;
+}
 
-    .nav {
-      padding: 5px;
-      
-    }
+.nav {
+  padding: 5px;
+  
+}
+
+
+.container {
+  margin-right: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  align-items: center;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+
+}
+
+  @media only screen and (min-width: 768px) {
+      .big {
+        width: 40%
+      }
   }
