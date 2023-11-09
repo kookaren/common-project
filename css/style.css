@@ -30,16 +30,15 @@ h1 {
   font-family: sans-serif;
   color: #001435; 
   text-align: center;
-  padding: 10px;
+  top: 60px;
+  padding: 50px;
   position: relative;
   animation: appear 3s;
 
 }
 
-@keyframes appear {
-  from {left: -800px;}
-  to {left: 0px;}
-}
+
+
 
 
 h2 {
@@ -121,6 +120,9 @@ h2 {
 
 .nav {
   background-color: #001435; 
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav li {
@@ -137,11 +139,14 @@ li a:hover {
   background-color: gray;
 }
 
-nav a:hover:after{
+
+.nav a:hover:after{
   width: 100%;
 }
 
-nav a:after {
+
+
+.nav a:after {
   
   position: absolute;
   content: "";
@@ -149,19 +154,18 @@ nav a:after {
   left: 0;
   width: 0;
   height: 100%;
-  background: white;
   transition: all .35s;
 
 }
 
-nav a span{
+.nav a span{
   position: relative;
   z-index: 2;
 }
 
 
 .skip a:hover, .skip a:focus{
-  background: white;
+  background: gray;
   left: 0;
   top: 20px;
   padding: 6px;
@@ -197,14 +201,19 @@ img, video {
   
 }
 
+.links {
+  color: white; 
+}
 
-.container {
+
+.container2 {
   margin-right: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5px;
   align-items: center;
 }
+
 
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -228,7 +237,76 @@ img, video {
 
 }
 
-  @media only screen and (min-width: 768px) {
+.nav2 {
+  display: none;
+}
+
+
+@media only screen and (min-width: 376px) and (max-width:1024px) {
+  .nav2 {
+    display: block;
+
+  }
+  .nav2 li {
+    display: inline-block;
+    font-family: sans-serif;
+  
+  }
+  
+  .nav2 a {
+    color: black;
+  }
+  
+  .nav2 {
+    position:fixed;
+    top: 50px;
+    background-color: white;
+    z-index: 1000;
+  }
+  
+
+  .container {
+    display: flex; /* Use flexbox to create a horizontal layout */
+  }
+
+  .container3 {
+    display: flex;
+    z-index: auto;
+}
+
+figure {
+  flex:1;
+  position: relative;
+  z-index: inherit;
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  color: #fff; 
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+
+  .column {
+    flex: 1; 
+    margin: 10px; 
+  }
+}
+
+  @media only screen and (min-width: 1025px) {
       .big {
         width: 40%
       }
