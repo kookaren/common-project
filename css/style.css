@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    color: black;
+    color: #001435;
     line-height: auto;
 }
 
@@ -22,24 +22,21 @@ hr {
 }
 
 #travel {
-  background-color: #c8dbd4;
+  background-image: url("../images/nature-colorful-landscape-dusk-cloud.jpg");
 }
 
 h1 {
   font-size: 55px;
-  font-family: sans-serif;
-  color: #001435; 
+  font-family: "Agbalumo", sans-serif;
   text-align: center;
   top: 60px;
   padding: 50px;
+  margin: 10px;
   position: relative;
   animation: appear 3s;
-
+  color:white;
+  -webkit-text-stroke: .5px black;
 }
-
-
-
-
 
 h2 {
   font-size: 30px;
@@ -74,10 +71,14 @@ h2 {
   img, video{
     display: inline-block;
     border: 5px solid #742f03; 
-    padding: 10px;
-    margin: 20px;
-    border-top-right-radius: 5px;
+    border-radius: 10px;
+    margin: 10px;
+  }
 
+  img:hover, video:hover {
+    -webkit-box-shadow: 12px 12px 18px -6px black;
+    -moz-box-shadow: 0 12px 18px -6px black;
+    box-shadow: 0 12px 18px -6px black;
   }
   
   /* Style the list items */
@@ -122,8 +123,11 @@ h2 {
   background-color: #001435; 
   position: fixed;
   width: 100%;
+  top:0px;
   z-index: 1000;
 }
+
+
 
 .nav li {
   display: inline-block;
@@ -139,12 +143,46 @@ li a:hover {
   background-color: gray;
 }
 
+#recipe-list {
+  display: none; 
+}
+
+
 
 .nav a:hover:after{
   width: 100%;
 }
 
+span {
+  display: block;
+}
 
+#btn {
+  background: #2825e6;
+  background-image: -webkit-linear-gradient(top, #2825e6, #87b8d6);
+  background-image: -moz-linear-gradient(top, #2825e6, #87b8d6);
+  background-image: -ms-linear-gradient(top, #2825e6, #87b8d6);
+  background-image: -o-linear-gradient(top, #2825e6, #87b8d6);
+  background-image: linear-gradient(to bottom, #2825e6, #87b8d6);
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  text-shadow: 1px 1px 3px #000000;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 24px;
+  text-decoration: none;
+}
+
+#btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
 
 .nav a:after {
   
@@ -161,6 +199,7 @@ li a:hover {
 .nav a span{
   position: relative;
   z-index: 2;
+  display: inline-block;
 }
 
 
@@ -178,10 +217,17 @@ li a:hover {
 li a.active {
   background-color: white;
   color: black;
- 
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 
+.container-food {
+  display: grid; 
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
 .nav li a{    
       
   font-size: 25px;
@@ -206,24 +252,26 @@ img, video {
 }
 
 
-.container2 {
-  margin-right: 5px;
+.container-pet {
+  left: 0px;
+  right: 0px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 5px;
   align-items: center;
+  justify-items: center;
 }
 
 
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: auto; /* Removes scroll animation */
+      scroll-behavior: auto; 
   }
 
   .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
+    -webkit-transition: none; 
+    transition: none;       
    }
 
    
@@ -237,45 +285,11 @@ img, video {
 
 }
 
-.nav2 {
+.sub-nav {
   display: none;
 }
 
-
-@media only screen and (min-width: 376px) and (max-width:1024px) {
-  .nav2 {
-    display: block;
-
-  }
-  .nav2 li {
-    display: inline-block;
-    font-family: sans-serif;
-  
-  }
-  
-  .nav2 a {
-    color: black;
-  }
-  
-  .nav2 {
-    position:fixed;
-    top: 50px;
-    background-color: white;
-    z-index: 1000;
-  }
-  
-
-  .container {
-    display: flex; /* Use flexbox to create a horizontal layout */
-  }
-
-  .container3 {
-    display: flex;
-    z-index: auto;
-}
-
 figure {
-  flex:1;
   position: relative;
   z-index: inherit;
 }
@@ -292,22 +306,106 @@ figcaption {
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.5s;
-
 }
 
 figure:hover figcaption {
   opacity: 1;
 }
 
+.container-three {
+  display: grid;
+  z-index: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto); 
+}
 
-  .column {
-    flex: 1; 
-    margin: 10px; 
+.container-three > figure:nth-child(odd){
+  grid-column: 1/span 2;
+}
+
+.container-three > figure:nth-child(even) {
+  grid-column: 2/span 2;
+}
+
+@media only screen and (min-width: 376px) {
+  .sub-nav {
+    display: block;
+
   }
+  .sub-nav li {
+    display: inline-block;
+    font-family: sans-serif;
+  
+  }
+  
+  .sub-nav a {
+    color: black;
+  }
+  
+  .sub-nav {
+    position:fixed;
+    top: 50px;
+    background-color: white;
+    z-index: 1000;
+  }
+  
+
+  .container-pet {
+  
+      grid-template-columns: 1fr 1fr;
+  }
+
+
+
+  .container-three {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto); 
+    grid-gap: 10px;
+  }
+
+
+  .container-three > figure:nth-child(-1n + 3) {
+    grid-column: span 4;
+  }
+  .container-three > figure:nth-last-child(2) {
+    grid-row-start: 2;
+    grid-column: 3 / span 4;
+  }
+  .container-three > figure:nth-last-child(1) {
+    grid-row-start: 2;
+    grid-column: 7 / span 4;
+  }
+
+
+
+
+
+
+
 }
 
   @media only screen and (min-width: 1025px) {
       .big {
         width: 40%
       }
+
+
+    .container-pet {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .container {
+      display: flex; /* Use flexbox to create a horizontal layout */
+    }
+  
+
+  .column {
+  flex: 1; 
+  margin: 10px; 
+  background-color: white;
+  padding: 30px;
+}
+
+
   }
