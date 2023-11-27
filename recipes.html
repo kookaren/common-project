@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Agbalumo">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Recipes</title>
@@ -18,7 +19,7 @@
         </ul>
         
     </div>
-    <div class = "nav2">
+    <div class = "sub-nav">
         <ul>
             <li><a class="links" href="#cookies">Cookies</a></li>
             <li><a class="links" href="#tofu">Mapo Tofu</a></li>
@@ -32,15 +33,15 @@
     </div>
 
 
-   <h1>RECIPES!</h1>
+   <h1>Recipes!</h1>
     <main>
         
     <div>
         <h2>Double Chocolate Cookies</h2>
         <div class="info"> 
-        <span>Origin: Michigan</span> <br>
-        <span>Source: Family Recipe</span> <br>
-        <span>Category: Dessert</span> <br>
+        <span>Origin: Michigan</span> 
+        <span>Source: Family Recipe</span> 
+        <span>Category: Dessert</span> 
         </div>
         
     
@@ -50,6 +51,7 @@
         <div class="container">
         <div class="column">
         <h3>Recipe Ingredients</h3>
+
         <ul>
             <li>Unsalted butter</li>
             <li>Granulated Sugar</li>
@@ -65,8 +67,8 @@
         </ul>
     </div>
     <div class="column">
-        <h3>Recipe Steps</h3> 
-        <ol type="1">
+        <button type="button" id="btn">Click to see full recipe!</button> 
+        <ol type="1" id="recipe-list">
             <li>In a mixing bowl cream together the butter, granulated sugar, and brown sugar</li>
             <li>Add the egg and vanilla extract and beat well</li>
             <li>Add the melted chocolate</li>
@@ -80,10 +82,11 @@
     </div>
 
         <h3>Additional Food images</h3>
+        <div class="container-food">
         <img src="images/double_chocolate_chips.png" width = "200" alt="A small pile of chocolate chips"> 
         <img src="images/double_chocolate_cookies.png" width = "200" alt="Chocolate melting in a boiler">
         <img src="images/Brown_sugar_examples.jpeg" width = "200" alt="Brown sugar in three different shades of darkness">
-
+    </div>
         <!-- Colleen van Lent -->
 
     </div>
@@ -91,9 +94,9 @@
     <div>
         <h2>Mapo Tofu</h2>
         <div class="info"> 
-            <span>Origin: Chinese</span> <br>
-            <span>Source: Own recipe</span> <br>
-            <span>Category: Main Dish</span>  <br>
+            <span>Origin: Chinese</span> 
+            <span>Source: Own recipe</span> 
+            <span>Category: Main Dish</span>  
         </div>
        
 
@@ -115,7 +118,7 @@
         </div>
         
         <div class="column"> 
-        <h3>Recipe Steps</h3> 
+            <h3>Recipe Steps</h3>
         <ol>
            <li>Brown pork in wok with oil for 4-5 minutes</li> 
            <li>Add sauce and garlic, stir fry for 2 minutes</li>
@@ -126,18 +129,18 @@
         </div>
 
         <h3>Additional Food images</h3>
+        <div class="container-food">
         <img src="images/ground_pork.jpeg" width = "200" alt="Ground Pork">
         <img src="images/add_tofu.jpeg" width = "200" alt="Add Tofu">
-        <!-- Karen Koo and Patrick Zhu -->
+    </div><!-- Karen Koo and Patrick Zhu -->
     </div>
     <hr>
-    <br>
     <div>
         <h2>Pesto Pasta</h2>
         <div class="info">
-            <span>Origin: Italian</span> <br> 
-        <span>Source: https://www.simplyrecipes.com/recipes/fresh_basil_pesto/ </span> <br>
-        <span>Category: Main Dish</span> <br>
+            <span>Origin: Italian</span>
+        <span>Source: https://www.simplyrecipes.com/recipes/fresh_basil_pesto/ </span> 
+        <span>Category: Main Dish</span>
         </div>
         
 
@@ -160,8 +163,8 @@
             </div>
 
             <div class="column"> 
-        <h3>Recipe Steps</h3> 
-        <ol>
+            <h3>Recipe Steps</h3>
+            <ol>
            <li>Heat up water in a pot for the pasta and put in a teaspoon of salt.</li> 
            <li>Pulse the basil and pine nuts in a food processor. Add a bit of olive oil as need be if the ingredients are too dry.</li>
            <li>Add the garlic and cheese to the food processor.</li>
@@ -174,17 +177,18 @@
         </div>
 
         <h3>Additional Food images</h3>
+        <div class="container-food">
         <img src="images/dinner_spread.JPG" alt="Four white bowls filled with pesto pasta are on a circular round table, with caprese salad, two wine bottles, and two candles in the middle." width="200">
         <img src="images/pesto-on-a-baguette.jpg" alt="Pesto On A Baguette" width="300">
-        <!--Elena Elkin -->  <br>
+    </div><!--Elena Elkin -->  
     </div>
     <hr>
     <div>
         <h2>Sushi Bake</h2>
         <div class="info">
-        <span>Origin: Asian</span> <br> 
-        <span>Source: Own recipe</span> <br>
-        <span>Category: Main Dish</span> <br>
+        <span>Origin: Asian</span>  
+        <span>Source: Own recipe</span> 
+        <span>Category: Main Dish</span> 
     </div>
 
         <img class="big"  src="images/sushiBake.jpeg" alt="Sushi Bake" width="300">
@@ -205,8 +209,7 @@
          </ul>
          </div>
          <div class="column">    
-
-         <h3>Recipe Steps</h3>
+        <h3>Recipe Steps</h3>
          <ol>
             <li>Preheat oven to 350 degrees</li>
             <li>Make rice. Mix rice vinegar into rice after it is cooked</li>
@@ -222,18 +225,19 @@
         </div>
 
          <h3>Additional Food images</h3>
+        <div class="container-food">
         <img src="images/rice.jpeg" alt="Make your rice and mix the rice vinegar into it" width="300"> 
         <img src="images/avocado.jpeg" alt="Sliced avocado from step 7" width="300">
-
+    </div>
         <!-- Ethan Tai and Joshua Vijayasegar -->
     </div>
     <hr>
 <div>
     <h2>Crunchwrap Supreme Recipe</h2>
     <div class="info">
-        <span>Origin: Taco Bell</span> <br> 
-    <span>Source: Taco Bell Website</span> <br>
-    <span>Category: Comfort Dish</span> <br>
+        <span>Origin: Taco Bell</span>
+    <span>Source: Taco Bell Website</span> 
+    <span>Category: Comfort Dish</span>
     </div>
     
 
@@ -271,13 +275,15 @@
      </ol>
      </div>
      </div>
-
+    <div class="container-food">
     <img src="images/Assembled_Crunchwrap.png" alt="Example of the assembled Crunchwrap supreme with toppings on the tortilla" width="300"> 
     <img src="images/Crunchwrap.png" alt="Pentagon Shape" width="300">
     <img src="images/Grilled_Crunchwrap.png" alt="Grill the crunchwrap" width="300">
-    <!-- Audrey Eng -->
+</div><!-- Audrey Eng -->
 </div>
 
     </main>
+
+    <script src="js/recipes.js"></script>
 </body>
 </html>
