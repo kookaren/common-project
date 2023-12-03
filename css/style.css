@@ -4,6 +4,10 @@ body {
     line-height: auto;
 }
 
+i {
+    text-align: center; 
+}
+
 .info {
   text-align: center;
   line-height: 1.5;
